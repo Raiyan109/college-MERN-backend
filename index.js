@@ -16,7 +16,7 @@ app.use('/api/admission', admissionRoutes)
 
 
 mongoose.set("strictQuery", false);
-mongoose.connect('mongodb://localhost:27017')
+mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         app.listen(process.env.PORT, (req, res) => {
             console.log(`connected db & college-MERN server listening on ${process.env.PORT}`)
