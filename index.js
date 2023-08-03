@@ -11,7 +11,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.use('/api/admission', admissionRoutes)
+app.use('/', admissionRoutes)
 
 
 
@@ -26,7 +26,7 @@ mongoose.connect('mongodb://localhost:27017')
         console.log(error)
     })
 
-export default app;
+
 
 
 
