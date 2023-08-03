@@ -26,7 +26,7 @@ mongoose.connect('mongodb://localhost:27017')
         console.log(error)
     })
 
-
+export default app;
 
 
 
