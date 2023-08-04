@@ -4,6 +4,8 @@ const cors = require('cors');
 require('dotenv').config()
 
 const admissionRoutes = require('./routes/admission.js')
+const loginRoutes = require('./routes/login.js')
+const candidateRoutes = require('./routes/candidate.js')
 
 
 const app = express()
@@ -12,6 +14,8 @@ app.use(express.json())
 app.use(cors())
 
 app.use('/api/admission', admissionRoutes)
+app.use('/api/login', loginRoutes)
+app.use('/api/candidate', candidateRoutes)
 
 
 
