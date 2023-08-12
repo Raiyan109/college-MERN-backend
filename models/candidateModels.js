@@ -24,8 +24,8 @@ const candidateSchema = new Schema({
         required: true
     },
     birthDate: {
-        type: Number,
-        required: true
+        type: Date,
+        default: Date.now
     }
 }, { timestamps: true })
 
